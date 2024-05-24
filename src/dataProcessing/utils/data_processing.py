@@ -15,4 +15,3 @@ if __name__ == '__main__':
     df = pd.read_csv('../../dataset/prices_data/BBAS3.SA.csv')
     data_processed = DataProcessing(df)
     print(data_processed.get_by_date_range('2022-01-01', '2022-01-06'))
-
