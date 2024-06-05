@@ -12,7 +12,9 @@ for file in files:
     data_processed.create_cumulative_std(name_return='Daily_Return')
     data_processed.create_cumulative_std(name_return='Week_Return')
     data_processed.create_cumulative_std(name_return='Month_Return')
-    data_processed.create_indicator(name_return='Daily_Return', factor=1)
+    data_processed.create_indicator(name_return='Daily_Return', factor=0.1)
+    data_processed.create_indicator(name_return='Week_Return', factor=0.1)
+    data_processed.create_indicator(name_return='Month_Return', factor=0.1)
     data_processed.dataframe.to_csv(f'../../dataset/prices_processed/{file}', index_label=False)
     print(f'File {file} created and save in ../dataset/prices_processed/{file}')
 
